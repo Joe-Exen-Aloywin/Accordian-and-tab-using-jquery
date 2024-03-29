@@ -1,0 +1,31 @@
+ body{
+    background-color: aqua;
+    background-image:url(../jason-leung-Xaanw0s0pMk-unsplash.jpg);
+    background-position: center;
+ }
+ .acordian{
+  background:none;
+ }
+    .acordion-item {
+      border:none;
+    }
+    .acordion-header {
+      width: 350px;
+      padding: 10px;
+      background-color:lightblue;
+      cursor: pointer;
+      
+    }
+    button:hover{
+      background: rgb(251,145,63);
+      background: radial-gradient(circle, rgba(251,145,63,1) 0%, rgba(252,70,181,1) 100%);
+    }
+    .acordion-content {
+      padding: 10px;
+      display: none;
+      background: rgb(251,145,63);
+      background: radial-gradient(circle, rgba(251,145,63,1) 0%, rgba(252,70,181,1) 100%);
+    }
+    i{
+      margin-left: 150px;
+    }

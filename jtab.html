@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs Example</title>
+  <link rel="stylesheet" href="jtab.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body style="background-color: lightblue;">
+  <div class="tab-main text-center">
+    <div class="tabs mt-5">
+      <div class="tab active" data-tab="#tab1">HTML</div>
+      <div class="tab" data-tab="#tab2">JavaScript</div>
+      <div class="tab" data-tab="#tab3">CSS</div>
+    </div>
+
+    <div class="tab-content active" id="tab1">
+      <p>All HTML elements can have attributes</p>
+      <p>Attributes provide additional information about elements</p>
+      <p>Attributes are always specified in the start tag</p>
+      <p>Attributes usually come in name/value pairs like: name="value"</p>
+    </div>
+    <div class="tab-content" id="tab2">
+      <p>Properties are the values associated with a JavaScript object.</p>
+      <p>A JavaScript object is a collection of unordered properties.</p>
+      <p>Properties can usually be changed, added, and deleted, but some are read only.</p>
+    </div>
+    <div class="tab-content" id="tab3">
+      <p>CSS stands for Cascading Style Sheets.</p>
+      <p>CSS describes how HTML elements are to be displayed on screen</p>
+      <p>It can control the layout of multiple web pages all at once</p>
+      <p>External stylesheets are stored in CSS files</p>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".tab").on("click", function () {
+        $(".tab").removeClass("active");
+        $(this).addClass("active");
+        $(".tab-content").removeClass("active");
+        $($(this).data("tab")).addClass("active");
+      });
+    });
+  </script>
+
+</body>
+
+</html>
